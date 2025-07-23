@@ -1,0 +1,32 @@
+project:
+  type: website
+
+website:
+  title: "CAP 4611"
+  google-analytics: "G-VCVVD4KWRF"
+  search: false
+
+  # Without this, the page footer will not display. It is removed in index.qmd
+  navbar:
+    background: dark
+
+  page-footer:
+    center:
+      - text: <ins>Made with Quarto</ins>
+        href: https://quarto.org
+      - text: <ins>Source</ins>
+        href: https://github.com/luqigroup/cap-4611
+      - text: <ins>License</ins>
+        href: https://raw.githubusercontent.com/luqigroup/cap-4611/refs/heads/main/LICENSE
+
+format:
+  html:
+    theme:
+      light: [simplex, custom.scss]
+    fontsize: 1.0em
+    linestretch: 1.4
+    mainfont: "sans-serif"
+    toc: true
+    toc-title: "<br><br><br>"
+    link-external-newwindow: false
+    minimal: true

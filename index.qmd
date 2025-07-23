@@ -1,0 +1,22 @@
+---
+title: CAP 4611
+subtitle: Algorithms for Machine Learning (Fall 2025)
+description: | 
+  Department of Computer Science<br>
+  University of Central Florida<br>
+  Orlando, FL, USA<br>
+
+navbar: false
+about:
+  id: heading
+  template: solana
+
+---
+
+:::{#heading}
+:::
+
+
+## Placeholder
+
+

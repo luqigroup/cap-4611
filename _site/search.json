@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html#instructor-and-ta-information",
+    "href": "index.html#instructor-and-ta-information",
+    "title": "Algorithms for Machine Learning",
+    "section": "Instructor and TA information",
+    "text": "Instructor and TA information\n\nInstructor: Ali Siahkoohi\n\n\nEmail: alisk@ucf.edu\nOffice hours: Tuesdays at 3–4pm\n\n\nTAs:\n\n\nPriyank Pathak\n\nEmail: priyank@ucf.edu\nOffice hours: Mondays, Wednesdays, and Fridays 1–2pm\n\nXin Liang\n\nEmail: xin.liang@ucf.edu\nOffice hours: Tuesdays, Thursdays, and Fridays 10:30–11:30am\n\nRafael Montalvo (grader)\n\nEmail: montalvorafael@ucf.edu\n\n\n\n\nSee webcourses for the office hour location."
+  },
+  {
+    "objectID": "index.html#description",
+    "href": "index.html#description",
+    "title": "Algorithms for Machine Learning",
+    "section": "Description",
+    "text": "Description\nWe introduce basic principles and techniques in the field of machine learning. These are some of the key tools behind the emerging field of data science. These techniques now run behind the scenes to discover patterns and make predictions in various applications in our daily lives. We focus on many of the core machine learning technologies, with motivating applications from a variety of disciplines.\nThe material for this course—including slides, homework assignments, and the overall website structure—is adapted from Mark Schmidt’s CPSC 340: Machine Learning and Data Mining course at the University of British Columbia, used with his permission. We are grateful for his contribution in providing foundational material that helped shape this course."
+  },
+  {
+    "objectID": "index.html#textbooks",
+    "href": "index.html#textbooks",
+    "title": "Algorithms for Machine Learning",
+    "section": "Textbooks",
+    "text": "Textbooks\nThere is no required textbook for the class. A introductory book that covers many (but not all) the topics we will discuss is the Artificial Intelligence book of Rusell and Norvig (AI:AMA) or the Artificial Intelligence book of Poole and Mackworth. More advanced books include The Elements of Statistical Learning (ESL) by Hastie et al., Murphy’s Machine Learning: A Probabilistic Perspective (ML:APP) which can be accessed through the library, and Bishop’s Pattern Recognition and Machine Learning (PRML)."
+  },
+  {
+    "objectID": "index.html#grading",
+    "href": "index.html#grading",
+    "title": "Algorithms for Machine Learning",
+    "section": "Grading",
+    "text": "Grading\n\nAssignments 30%, Midterm 20%, Final 50%.\nThere will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation."
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Algorithms for Machine Learning",
+    "section": "Schedule",
+    "text": "Schedule\nLecture slides will be posted on the course website before each lecture. The instructor reserves the right to alter this schedule as needed.\n\n\n\nDates\nLecture Topics\nResources\nAssignments/Notes\n\n\n\n\nAug 19, Aug 21\nMotivation and Syllabus Exploratory Data Analysis Decision Trees\nWhat is Machine Learning? Machine Learning Rise of the Machines Talking Machine Episode 1 Mathematics for Machine Learning Gotta Catch’em all Why Not to Trust Statistics Visualization Types Google Chart Gallery Other Tools A Visual Introduction to Machine Learning Decision Trees Entropy What is Big O Notation? AI:AMA 19.2-3, ESL: 9.2, ML:APP 16.2\nAssignment 1 a1.zip Assignment instructions (updated) Big-O Notes\n\n\nAug 26, Aug 28\nFundamentals of Learning Probability Slides\n7 Steps of Machine Learning IID Cross-validation Bias-variance\nAssignment 1 due: Aug 29 Course Notation Guide Probability Notes\n\n\nSep 2, Sep 4\nProbabilistic Classifiers Non-Parametric Models Ensemble Methods\nNo Free Lunch AI:AMA 19.4-5, ESL 7.1-7.4, 7.10, ML:APP 1.4, 6.5 Conditional probability (demo) Naive Bayes Probabilities and Battleship AI:AMA 12.6, ESL 4.3, ML:APP 2.2, 3.5, 4.1-4.2 K-nearest neighbours Decision Theory for Darts Norms AI:AMA 19.7, ESL 13.3, ML:APP 1.4 Ensemble Methods Random Forests Empirical Study Kinect AI:AMA 19.8, ESL: 7.11, 8.2, 15, 16.3, ML:APP 6.2.1, 16.2.5, 16.6\nAssignment 2 a2.zip\n\n\nSep 9, Sep 11\nClustering  More Clustering  Outlier Detection\nClustering K-means clustering (demo) K-Means++ (demo) IDM 8.1-8.2, ESL: 14.3 DBSCAN (video, demo) Hierarchical Clustering Phylogenetic Trees IDM 8.4  Empirical Study IDM 8.3, ESL 14.3.12, ML:APP 25.5\nLinear Algebra Notes Linear/Quadratic Gradients\n\n\nSep 16, Sep 18\nLinear Regression Nonlinear Regression  Gradient Descent\nLinear Regression (demo, 2D data, 2D video) Least Squares Essence of Calculus Partial Derivative Gradient ESL 3.1-2, ML:APP 7.1-3, AI:AMA 19.6 Why should one learn machine learning from scratch? Essence of Linear Algebra Matrix Differentiation Fluid Simulation (video) ESL 5.1, 6.3  Gradient Descent Convex Functions\nAssignment 2 due: Sep 19\n\n\nSep 23, Sep 25\nRobust Regression  Feature Selection  Regularization\nML:APP 7.4  Genome-Wide Association Studies AIC BIC ESL 3.3, 7.5-7  ESL 3.4., ML:APP 7.5, AI:AMA 19.4\nAssignment 3 a3.zip\n\n\nSep 30, Oct 2\nMore Regularization Linear Classifiers  More Linear Classifiers\nRBF video RBF and Regularization video ESL 6.7, ML:APP 13.3-4  Perceptron ESL 4.5, ML:APP 8.5  Support Vector Machines ESL 4.4, 12.1-2, ML:APP 8.1-3, 9.5 14.5, AI:AMA 19.6\nAssignment 3 due: Oct 3\n\n\nOct 7, Oct 9\nFeature Engineering  Kernel Trick  Stochastic Gradient Descent\nGmail Priority Inbox ESL 12.3, ML:APP 14.1-4  Stochastic Gradient Descent Theory and Practice ML:APP 8.5\nAssignment 4 a4.zip\n\n\nOct 14, Oct 16\nBoosting\nAdaBoost (video) XGBoost (video) ML:APP 16.4\nMidterm - Oct 16\n\n\nOct 21, Oct 23\nMLE and MAP  Principal Component Analysis\nMaximum Likelihood Estimation ML:APP 9.3-4  Principal Component Analysis ESL 14.5, IDM B.1, ML:APP 12.2\nAssignment 4 due: Oct 24  Max and Argmax Notes\n\n\nOct 28, Oct 30\nMore PCA  Beyond PCA\nMaking Sense of PCA SVD Eigenfaces  Non-Negative Matrix Factorization (original - access from UCF) Recommender Systems Netflix Prize ESL 14.6, ML: APP 13.8\nAssignment 5 a5.zip\n\n\nNov 4, Nov 6\nMulti-Dimensional Scaling  Neural Networks  Over-Parameterization\nNonlinear Dimensionality Reduction t-SNE demoUMAP demo  ESL 14.8-9, IDM B.2  Google Video What is a Neural Network? Interactive Guide ML:APP 16.5, ESL 11.1-4, AI:AMA 21.1\nAssignment 5 due: Nov 7\n\n\nNov 11, Nov 13\nDeep Neural Networks\nFortune Article Deep Learning References Alchemy ML:APP 28.3, ESL 11.5, AI:AMA 21.2 and 21.4-5\nAssignment 6 a6.zip  Veterans Day - No Class Tuesday\n\n\nNov 18, Nov 20\nConvolutions  Convolutional Neural Networks  Autoencoders  Recurrent Neural Networks  LSTMs and Transformers\nBut what is a convolution?  Convolutional Neural Networks ML:APP 28.4, ESL 11.7, AI:AMA 21.3  AI:AMA 21.6-8\nAssignment 6 due: Nov 21\n\n\nNov 25, Nov 27\nWhat do we Learn?\n\nThanksgiving - No Class Thursday\n\n\nDec 2\nFinal Exam"
+  },
+  {
+    "objectID": "index.html#related-courses",
+    "href": "index.html#related-courses",
+    "title": "Algorithms for Machine Learning",
+    "section": "Related Courses",
+    "text": "Related Courses\n\nMachine Learning and Data Mining (UBC)\nIntroduction to Machine Learning (Alberta)\nPractical Machine Learning (Berkeley)\nMachine Learning (MIT)\nMachine Learning (CMU)\nCourse in Machine Learning (Maryland)\nData Mining (CMU)"
+  }
+]

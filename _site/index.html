@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Department of Computer Science  University of Central Florida  Orlando, FL, USA ">
+
+<title>CAP 4611 - Algorithms for Machine Learning</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href="./files/TheTab_KGrgb_square.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VCVVD4KWRF"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VCVVD4KWRF', { 'anonymize_ip': true});
+</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title"><br><br><br></h2>
+   
+  <ul>
+  <li><a href="#instructor-and-ta-information" id="toc-instructor-and-ta-information" class="nav-link active" data-scroll-target="#instructor-and-ta-information">Instructor and TA information</a></li>
+  <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
+  <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">Textbooks</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#related-courses" id="toc-related-courses" class="nav-link" data-scroll-target="#related-courses">Related Courses</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+<div class="quarto-about-solana column-body">
+  <div class="about-entity">
+    <div class="entity-contents">
+      <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Algorithms for Machine Learning</h1>
+<p class="subtitle lead">CAP 4611 (Fall 2025)</p>
+</div>
+<div>
+  <div class="description">
+    <p>Department of Computer Science<br> University of Central Florida<br> Orlando, FL, USA<br></p>
+  </div>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header> 
+      <div class="about-contents"><div id="heading">
+</div></div>
+    </div>
+    <img src="files/TheTab_KGrgb_300ppi.png" class="about-image
+  rounded " style="width: 120px;">
+  </div>
+</div>
+
+<section id="instructor-and-ta-information" class="level2">
+<h2 data-anchor-id="instructor-and-ta-information">Instructor and TA information</h2>
+<dl>
+<dt><strong>Instructor:</strong> <span style="font-weight: normal;"><a href="https://alisiahkoohi.github.io/">Ali Siahkoohi</a></span></dt>
+<dd>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:alisk@ucf.edu">alisk@ucf.edu</a></li>
+<li><strong>Office hours:</strong> Tuesdays at 3–4pm</li>
+</ul>
+</dd>
+<dt><strong>TAs:</strong></dt>
+<dd>
+<ul>
+<li>Priyank Pathak
+<ul>
+<li><strong>Email:</strong> <a href="mailto:priyank@ucf.edu">priyank@ucf.edu</a></li>
+<li><strong>Office hours:</strong> Mondays, Wednesdays, and Fridays 1–2pm</li>
+</ul></li>
+<li>Xin Liang
+<ul>
+<li><strong>Email:</strong> <a href="mailto:xin.liang@ucf.edu">xin.liang@ucf.edu</a></li>
+<li><strong>Office hours:</strong> Tuesdays, Thursdays, and Fridays 10:30–11:30am</li>
+</ul></li>
+<li>Rafael Montalvo (grader)
+<ul>
+<li><strong>Email:</strong> <a href="mailto:montalvorafael@ucf.edu">montalvorafael@ucf.edu</a></li>
+</ul></li>
+</ul>
+</dd>
+</dl>
+<p><em>See webcourses for the office hour location.</em></p>
+</section>
+<section id="description" class="level2">
+<h2 data-anchor-id="description">Description</h2>
+<p>We introduce basic principles and techniques in the field of machine learning. These are some of the key tools behind the emerging field of data science. These techniques now run behind the scenes to discover patterns and make predictions in various applications in our daily lives. We focus on many of the core machine learning technologies, with motivating applications from a variety of disciplines.</p>
+<p>The material for this course—including slides, homework assignments, and the overall website structure—is adapted from <strong>Mark Schmidt</strong>’s <a href="https://www.cs.ubc.ca/~schmidtm/Courses/340-F22/">CPSC 340: Machine Learning and Data Mining course</a> at the University of British Columbia, used with his permission. We are grateful for his contribution in providing foundational material that helped shape this course.</p>
+</section>
+<section id="textbooks" class="level2">
+<h2 data-anchor-id="textbooks">Textbooks</h2>
+<p>There is no required textbook for the class. A introductory book that covers many (but not all) the topics we will discuss is the <a href="http://aima.cs.berkeley.edu/">Artificial Intelligence</a> book of Rusell and Norvig (AI:AMA) or the <a href="http://artint.info/html/ArtInt.html">Artificial Intelligence</a> book of Poole and Mackworth. More advanced books include <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning</a> (ESL) by Hastie et al., Murphy’s <a href="https://probml.github.io/pml-book/book0.html">Machine Learning: A Probabilistic Perspective</a> (ML:APP) which can be accessed through the library, and Bishop’s <a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a> (PRML).</p>
+</section>
+<section id="grading" class="level2">
+<h2 data-anchor-id="grading">Grading</h2>
+<ul>
+<li>Assignments 30%, Midterm 20%, Final 50%.</li>
+<li>There will be 2% extra credit for submitting teaching evaluation, if more than 80% of students submitted the evaluation.</li>
+</ul>
+</section>
+<section id="schedule" class="level2">
+<h2 data-anchor-id="schedule">Schedule</h2>
+<p>Lecture slides will be posted on the course website before each lecture. <em>The instructor reserves the right to alter this schedule as needed.</em></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Dates</th>
+<th>Lecture Topics</th>
+<th>Resources</th>
+<th>Assignments/Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aug 19, Aug 21</td>
+<td><a href="https://www.dropbox.com/scl/fi/82rlv1yyk0btgdp7ad7xf/L1.pdf?rlkey=o70h5pz44rdkpern2yy7vyr0r&amp;st=am2kt5j7&amp;raw=1">Motivation and Syllabus</a><br> <a href="https://www.dropbox.com/scl/fi/ulrfk9uw0c94byjw0ipm6/L2.pdf?rlkey=kz1artp6vzxtih0unv9e46h92&amp;st=pqicdr3r&amp;raw=1">Exploratory Data Analysis</a><br> <a href="https://www.dropbox.com/scl/fi/4n49n5ekfsguemzrzmmzz/L3.pdf?rlkey=xl4dia5xmpr6dfv0evggi0jjx&amp;st=a2jxuts2&amp;raw=1">Decision Trees</a></td>
+<td><a href="https://www.youtube.com/watch?v=OokV2AX4TKg">What is Machine Learning?</a><br> <a href="https://en.wikipedia.org/wiki/Machine_learning">Machine Learning</a><br> <a href="http://www.economist.com/news/briefing/21650526-artificial-intelligence-scares-peopleexcessively-so-rise-machines">Rise of the Machines</a><br> <a href="https://www.thetalkingmachines.com/episodes/hello-world">Talking Machine Episode 1</a><br> <a href="https://mml-book.github.io/">Mathematics for Machine Learning</a><br> <a href="http://datagenetics.com/blog/april32016/index.html">Gotta Catch’em all</a><br> <a href="https://mathwithbaddrawings.com/2016/07/13/why-not-to-trust-statistics/">Why Not to Trust Statistics</a><br> <a href="http://guides.library.duke.edu/datavis/vis_types">Visualization Types</a><br> <a href="https://developers.google.com/chart/interactive/docs/gallery?hl=en">Google Chart Gallery</a><br> <a href="http://selection.datavisualization.ch/">Other Tools</a><br> <a href="http://www.r2d3.us/visual-intro-to-machine-learning-part-1">A Visual Introduction to Machine Learning</a><br> <a href="https://en.wikipedia.org/wiki/Decision_tree_learning">Decision Trees</a><br> <a href="https://en.wikipedia.org/wiki/Entropy_(information_theory)">Entropy</a><br> <a href="https://www.youtube.com/watch?v=Q_1M2JaijjQ">What is Big O Notation?</a><br> AI:AMA 19.2-3, ESL: 9.2, ML:APP 16.2</td>
+<td><a href="https://www.dropbox.com/scl/fi/95hyxmmxjpmdsoutthddv/a1.pdf?rlkey=79q6zjh0zbm1s8kgohemc92wy&amp;st=6wieiy03&amp;raw=1">Assignment 1</a> <a href="https://www.dropbox.com/scl/fi/k8qebrvx337g56on3ev1n/a1.zip?rlkey=bg6y2yxptb38n82mo665fbbku&amp;st=zgnxln0x&amp;raw=1">a1.zip</a><br> <a href="https://www.dropbox.com/scl/fi/s8u1c0b48pjbqpyl1ndno/submission_instructions.pdf?rlkey=skzx0ekx4i03nm9oh84h1tzis&amp;st=fdo6jhf6&amp;raw=1"><span style="color: red;">Assignment instructions (updated)</span></a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/bigO.pdf">Big-O Notes</a></td>
+</tr>
+<tr class="even">
+<td>Aug 26, Aug 28</td>
+<td><a href="https://www.dropbox.com/scl/fi/9zk1ygh25k8bw3ourxvbl/L4.pdf?rlkey=98qfdgpf6ahgp7amaj5o9sy3i&amp;st=czdub40g&amp;raw=1">Fundamentals of Learning</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/probabilitySlides.pdf">Probability Slides</a></td>
+<td><a href="https://www.youtube.com/watch?v=nKW8Ndu7Mjw">7 Steps of Machine Learning</a><br> <a href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">IID</a><br> <a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">Cross-validation</a><br> <a href="https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff">Bias-variance</a></td>
+<td><strong>Assignment 1 due: Aug 29</strong><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/notation.pdf">Course Notation Guide</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/probability.pdf">Probability Notes</a><br></td>
+</tr>
+<tr class="odd">
+<td>Sep 2, Sep 4</td>
+<td><a href="https://www.dropbox.com/scl/fi/wimb3iangtpy1flgykyd0/L5.pdf?rlkey=0upgd8mwe3xbhkulvvzgc190p&amp;st=ecj64ego&amp;raw=1">Probabilistic Classifiers</a><br> <a href="https://www.dropbox.com/scl/fi/wdcrpbr449dc2gjynsb5x/L6.pdf?rlkey=0mm4osb98kbpzqpq5m7iaxpsd&amp;st=djemtl2c&amp;raw=1">Non-Parametric Models</a><br> <a href="https://www.dropbox.com/scl/fi/5k1qux03y8ddfmiak5a58/L7.pdf?rlkey=v9mezucund42h0s634refrq3q&amp;st=14uytfir&amp;raw=1">Ensemble Methods</a></td>
+<td><a href="https://en.wikipedia.org/wiki/No_free_lunch_theorem">No Free Lunch</a><br> AI:AMA 19.4-5, ESL 7.1-7.4, 7.10, ML:APP 1.4, 6.5<br> <a href="https://en.wikipedia.org/wiki/Conditional_probability">Conditional probability</a> (<a href="http://setosa.io/ev/conditional-probability/">demo</a>)<br> <a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">Naive Bayes</a><br> <a href="http://datagenetics.com/blog/december32011/index.html">Probabilities and Battleship</a><br> AI:AMA 12.6, ESL 4.3, ML:APP 2.2, 3.5, 4.1-4.2<br> <a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm">K-nearest neighbours</a><br> <a href="http://www.datagenetics.com/blog/january12012/index.html">Decision Theory for Darts</a><br> <a href="https://en.wikipedia.org/wiki/Norm_(mathematics)">Norms</a><br> AI:AMA 19.7, ESL 13.3, ML:APP 1.4<br> <a href="https://en.wikipedia.org/wiki/Ensemble_learning">Ensemble Methods</a><br> <a href="https://en.wikipedia.org/wiki/Random_forest">Random Forests</a><br> <a href="http://jmlr.org/papers/volume15/delgado14a/delgado14a.pdf">Empirical Study</a><br> <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/BodyPartRecognition.pdf">Kinect</a><br> AI:AMA 19.8, ESL: 7.11, 8.2, 15, 16.3, ML:APP 6.2.1, 16.2.5, 16.6</td>
+<td><a href="https://www.dropbox.com/scl/fi/5h6waf7y3wjym6dexuijk/a2.pdf?rlkey=4qj9qisgth24dfizduk1hvc6p&amp;st=9el6dav7&amp;raw=1">Assignment 2</a> <a href="https://www.dropbox.com/scl/fi/m8u9k8y8kdlzyxlpdahn1/a2.zip?rlkey=59pb3cvwpw2wshqrp3zsab4jf&amp;st=p9wtd8rv&amp;raw=1">a2.zip</a></td>
+</tr>
+<tr class="even">
+<td>Sep 9, Sep 11</td>
+<td><a href="https://www.dropbox.com/scl/fi/621nivkq2vcl5v1hidjm3/L8.pdf?rlkey=40uotpzp7a141rwa51f2l7l05&amp;st=fpjf43o5&amp;raw=1">Clustering</a> <br> <a href="https://www.dropbox.com/scl/fi/9v6fmgw2frbqp5xb70gaq/L9.pdf?rlkey=0t3sv2f7c09rws0ty0dtd57kg&amp;st=moq2zc90&amp;raw=1">More Clustering</a> <br> <a href="https://www.dropbox.com/scl/fi/6mbn0e3ji45mp0h6dkidm/L10.pdf?rlkey=orjyou2plf5qr8vzl5aopgaax&amp;st=56tl3ya2&amp;raw=1">Outlier Detection</a></td>
+<td><a href="https://en.wikipedia.org/wiki/Cluster_analysis">Clustering</a><br> <a href="https://en.wikipedia.org/wiki/K-means_clustering">K-means clustering</a> (<a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/">demo</a>)<br> <a href="http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf">K-Means++</a> (<a href="https://www.youtube.com/watch?v=BIQDlmZDuf8">demo</a>)<br> IDM 8.1-8.2, ESL: 14.3<br> <a href="https://en.wikipedia.org/wiki/DBSCAN">DBSCAN</a> (<a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/dbscan.mov">video</a>, <a href="https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/">demo</a>)<br> <a href="https://en.wikipedia.org/wiki/Hierarchical_clustering">Hierarchical Clustering</a><br> <a href="https://en.wikipedia.org/wiki/Phylogenetic_tree">Phylogenetic Trees</a><br> IDM 8.4 <br> <a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0152173">Empirical Study</a><br> IDM 8.3, ESL 14.3.12, ML:APP 25.5</td>
+<td><a href="https://www.cs.ubc.ca/~schmidtm/Documents/2009_Notes_LinearAlgebra.pdf">Linear Algebra Notes</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/linearQuadraticGradients.pdf">Linear/Quadratic Gradients</a></td>
+</tr>
+<tr class="odd">
+<td>Sep 16, Sep 18</td>
+<td><a href="https://www.dropbox.com/scl/fi/4l1oul1yuwcy77cr0bjyg/L11.pdf?rlkey=ffnbc8oel9epuom9vonra4bdk&amp;st=0o3cspif&amp;raw=1">Linear Regression</a><br> <a href="https://www.dropbox.com/scl/fi/9j83lpx6iq5l53nev1no2/L12.pdf?rlkey=p75q0l1vyxvpfx53c2bqvmcw5&amp;st=r75czc0e&amp;raw=1">Nonlinear Regression</a> <br> <a href="https://www.dropbox.com/scl/fi/23oipp2ic34zlc9uslbex/L13.pdf?rlkey=wpbi2i0ym1z0f83c1q9cx8usv&amp;st=i3y6tnwt&amp;raw=1">Gradient Descent</a></td>
+<td><a href="http://datagenetics.com/blog/august12013/index.html">Linear Regression</a> (<a href="http://setosa.io/ev/ordinary-least-squares-regression/">demo</a>, <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/linear.mp4">2D data</a>, <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/linear2.mp4">2D video</a>)<br> <a href="https://en.wikipedia.org/wiki/Ordinary_least_squares">Least Squares</a><br> <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Essence of Calculus</a><br> <a href="https://en.wikipedia.org/wiki/Partial_derivative">Partial Derivative</a><br> <a href="https://en.wikipedia.org/wiki/Gradient">Gradient</a><br> ESL 3.1-2, ML:APP 7.1-3, AI:AMA 19.6<br> <a href="https://www.quora.com/Why-should-one-learn-machine-learning-from-scratch-rather-than-just-learning-to-use-the-available-libraries">Why should one learn machine learning from scratch?</a><br> <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a><br> <a href="https://atmos.washington.edu/~dennis/MatrixCalculus.pdf">Matrix Differentiation</a><br> <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.726.8764&amp;rep=rep1&amp;type=pdf">Fluid Simulation</a> (<a href="https://www.youtube.com/watch?v=kGB7Wd9CudA">video</a>)<br> ESL 5.1, 6.3 <br> <a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient Descent</a><br> <a href="https://en.wikipedia.org/wiki/Convex_function">Convex Functions</a></td>
+<td><strong>Assignment 2 due: Sep 19</strong><br></td>
+</tr>
+<tr class="even">
+<td>Sep 23, Sep 25</td>
+<td><a href="https://www.dropbox.com/scl/fi/o78iykui56q6v2fv9aspm/L14.pdf?rlkey=tw6927kwyqhsjvwo8dr34zpmr&amp;st=nn21zspa&amp;raw=1">Robust Regression</a> <br> <a href="https://www.dropbox.com/scl/fi/u9s8epvl8y4ppe6lroemm/L15.pdf?rlkey=do284oa74g3g3hohhgcdwtwe4&amp;st=ck9bi2il&amp;raw=1">Feature Selection</a> <br> <a href="https://www.dropbox.com/scl/fi/0z6tr9dzgf7oh4h98oqcy/L16.pdf?rlkey=d9139ffvfn283p0k6xq3slqrw&amp;st=huik86zd&amp;raw=1">Regularization</a></td>
+<td>ML:APP 7.4 <br> <a href="https://en.wikipedia.org/wiki/Genome-wide_association_study">Genome-Wide Association Studies</a><br> <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">AIC</a><br> <a href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">BIC</a><br> ESL 3.3, 7.5-7 <br> ESL 3.4., ML:APP 7.5, AI:AMA 19.4</td>
+<td><a href="https://www.dropbox.com/scl/fi/2r9xhjjva69g65dt3wr5q/a3.pdf?rlkey=ruehyyjwnpzk8hnjnzs0goxtw&amp;st=ufpqkxbd&amp;raw=1">Assignment 3</a> <a href="https://www.dropbox.com/scl/fi/nptm80ojjp9uz4snnthe1/a3.zip?rlkey=6kd7kbp54ns8c5g9o88wkd94q&amp;st=thntwpgw&amp;raw=1">a3.zip</a></td>
+</tr>
+<tr class="odd">
+<td>Sep 30, Oct 2</td>
+<td><a href="https://www.dropbox.com/scl/fi/tjxmez26ufeq2uve01mhk/L17.pdf?rlkey=6lesodnsw5tou4amoyx3ulrs4&amp;st=ry7fxsio&amp;raw=1">More Regularization</a><br> <a href="https://www.dropbox.com/scl/fi/lb1aizkkwc9mydjs4iikr/L18.pdf?rlkey=r6rtp6eir8epn4iwr2070oyho&amp;st=hfa2xxij&amp;raw=1">Linear Classifiers</a> <br> <a href="https://www.dropbox.com/scl/fi/otkb1ell8aae3mqozo3ur/L19.pdf?rlkey=xlkq3crgd1vcwber8s4bmv4lj&amp;st=ecixbfrw&amp;raw=1">More Linear Classifiers</a></td>
+<td><a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/rbf.mp4">RBF video</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/rbf2.mp4">RBF and Regularization video</a><br> ESL 6.7, ML:APP 13.3-4 <br> <a href="https://en.wikipedia.org/wiki/Perceptron">Perceptron</a><br> ESL 4.5, ML:APP 8.5 <br> <a href="https://en.wikipedia.org/wiki/Support_vector_machine">Support Vector Machines</a><br> ESL 4.4, 12.1-2, ML:APP 8.1-3, 9.5 14.5, AI:AMA 19.6</td>
+<td><strong>Assignment 3 due: Oct 3</strong></td>
+</tr>
+<tr class="even">
+<td>Oct 7, Oct 9</td>
+<td><a href="https://www.dropbox.com/scl/fi/tym8whviry8hz8er1eelk/L20.pdf?rlkey=y7deyguxn0y4rufcsakjd8c2w&amp;st=fjbycvad&amp;raw=1">Feature Engineering</a> <br> <a href="https://www.dropbox.com/scl/fi/dnt3tjzi02u0k4hqpdeit/L21.pdf?rlkey=dhppwkuk0ti8c77ty3rdl2r5p&amp;st=uq7ome2y&amp;raw=1">Kernel Trick</a> <br> <a href="https://www.dropbox.com/scl/fi/7dldaiteu5u9xb9irx47e/L22.pdf?rlkey=3p2njr3mj3w8go6l7lc4dkzwj&amp;st=ndlue4nl&amp;raw=1">Stochastic Gradient Descent</a></td>
+<td><a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/36955.pdf">Gmail Priority Inbox</a><br> ESL 12.3, ML:APP 14.1-4 <br> <a href="https://en.wikipedia.org/wiki/Stochastic_gradient_descent">Stochastic Gradient Descent</a><br> <a href="https://www.cs.ubc.ca/~schmidtm/Documents/2022_DLRL_Optim.pdf">Theory and Practice</a><br> ML:APP 8.5</td>
+<td><a href="https://www.dropbox.com/scl/fi/b6zqanfcz5js8as5hp1fv/a4.pdf?rlkey=bdhd9z1al7omv6n2mjjgfmr56&amp;st=s9pq488n&amp;raw=1">Assignment 4</a> <a href="https://www.dropbox.com/scl/fi/7rg4su2okp2oxmep03sue/a4.zip?rlkey=5bkx3nnb0blh3wqme0jo1r66g&amp;st=5s8p4njh&amp;raw=1">a4.zip</a></td>
+</tr>
+<tr class="odd">
+<td>Oct 14, Oct 16</td>
+<td><a href="https://www.dropbox.com/scl/fi/hwz2gkqqxnzzcp1jmm7z2/L23.pdf?rlkey=um4cdp74o8ctj30uy4t1wmreq&amp;st=r91kyzyu&amp;raw=1">Boosting</a></td>
+<td><a href="https://en.wikipedia.org/wiki/AdaBoost">AdaBoost</a> (<a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/adaBoost.mp4">video</a>)<br> <a href="https://xgboost.readthedocs.io/en/latest/tutorials/model.html">XGBoost</a> (<a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/regressionBoost.mp4">video</a>)<br> ML:APP 16.4</td>
+<td><strong>Midterm - Oct 16</strong></td>
+</tr>
+<tr class="even">
+<td>Oct 21, Oct 23</td>
+<td><a href="https://www.dropbox.com/scl/fi/v2bt7tkqpdyckwem06u8x/L24.pdf?rlkey=1pt3g0kc8sd0049zru1eke566&amp;st=x6evon2h&amp;raw=1">MLE and MAP</a> <br> <a href="https://www.dropbox.com/scl/fi/wthi8iquunf5a7fmo9wsq/L25.pdf?rlkey=c953ir21u09dvaienbn8f0k8a&amp;st=ewzmdfpg&amp;raw=1">Principal Component Analysis</a></td>
+<td><a href="https://en.wikipedia.org/wiki/Maximum_likelihood_estimation">Maximum Likelihood Estimation</a><br> ML:APP 9.3-4 <br> <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">Principal Component Analysis</a><br> ESL 14.5, IDM B.1, ML:APP 12.2</td>
+<td><strong>Assignment 4 due: Oct 24</strong> <br> <a href="https://www.cs.ubc.ca/~schmidtm/Courses/Notes/max.pdf">Max and Argmax Notes</a></td>
+</tr>
+<tr class="odd">
+<td>Oct 28, Oct 30</td>
+<td><a href="https://www.dropbox.com/scl/fi/xklehmt04na7g54984l97/L26.pdf?rlkey=j0i7yk31vyomvuhml65cmrkxs&amp;st=8bei79dz&amp;raw=1">More PCA</a> <br> <a href="https://www.dropbox.com/scl/fi/c08y1vls64crgr08qby1k/L27.pdf?rlkey=r62uyzcql61xtkk9b8uljuzr8&amp;st=ppzrocen&amp;raw=1">Beyond PCA</a></td>
+<td><a href="https://stats.stackexchange.com/questions/2691/making-sense-of-principal-component-analysis-eigenvectors-eigenvalues">Making Sense of PCA</a><br> <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">SVD</a><br> <a href="https://en.wikipedia.org/wiki/Eigenface">Eigenfaces</a> <br> <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization">Non-Negative Matrix Factorization</a> (<a href="http://www.nature.com/nature/journal/v401/n6755/abs/401788a0.html">original</a> - access from UCF)<br> <a href="https://en.wikipedia.org/wiki/Recommender_system">Recommender Systems</a><br> <a href="https://en.wikipedia.org/wiki/Netflix_Prize">Netflix Prize</a><br> ESL 14.6, ML: APP 13.8</td>
+<td><a href="https://www.dropbox.com/scl/fi/6xfv4p2gsptz8i882nzkm/a5.pdf?rlkey=ni5zseke4appiff5idacoqopz&amp;st=xfiasuze&amp;raw=1">Assignment 5</a> <a href="https://www.dropbox.com/scl/fi/hs6fxohnzce3vmf7evl4l/a5.zip?rlkey=omm28190cvb5e0l61wxsuu9y2&amp;st=4iw31eyv&amp;raw=1">a5.zip</a></td>
+</tr>
+<tr class="even">
+<td>Nov 4, Nov 6</td>
+<td><a href="https://www.dropbox.com/scl/fi/heaim6slp9b3gboyr3gw1/L28.pdf?rlkey=eruz4txy0xbm4seffwhc99l4n&amp;st=vadvakuw&amp;raw=1">Multi-Dimensional Scaling</a> <br> <a href="https://www.dropbox.com/scl/fi/rq5fo47eydn03ztb3iu99/L29.pdf?rlkey=fz0rkcmfyavmh9etlud38jnv4&amp;st=2xdjd8jx&amp;raw=1">Neural Networks</a> <br> <a href="https://www.dropbox.com/scl/fi/5943cs7nhxqyl28x65ere/L30.pdf?rlkey=y5uqj5xuv5wx2flrf1lslki6y&amp;st=m520t63r&amp;raw=1">Over-Parameterization</a></td>
+<td><a href="https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction">Nonlinear Dimensionality Reduction</a><br> <a href="http://distill.pub/2016/misread-tsne/">t-SNE demo</a><br><a href="https://pair-code.github.io/understanding-umap/">UMAP demo</a> <br> ESL 14.8-9, IDM B.2 <br> <a href="https://www.youtube.com/watch?v=bHvf7Tagt18">Google Video</a><br> <a href="https://www.youtube.com/watch?v=aircAruvnKk">What is a Neural Network?</a><br> <a href="https://jalammar.github.io/visual-interactive-guide-basics-neural-networks">Interactive Guide</a><br> ML:APP 16.5, ESL 11.1-4, AI:AMA 21.1</td>
+<td><strong>Assignment 5 due: Nov 7</strong></td>
+</tr>
+<tr class="odd">
+<td>Nov 11, Nov 13</td>
+<td><a href="https://www.dropbox.com/scl/fi/x7us4hr833fvjlhjmcqfo/L31.pdf?rlkey=6w2yismse2j3hemeetiiehbwv&amp;st=ggnp58tp&amp;raw=1">Deep Neural Networks</a></td>
+<td><a href="http://fortune.com/ai-artificial-intelligence-deep-machine-learning/">Fortune Article</a><br> <a href="https://github.com/ChristosChristofidis/awesome-deep-learning">Deep Learning References</a><br> <a href="https://www.youtube.com/watch?v=Qi1Yry33TQE&amp;feature=youtu.be&amp;t=3m">Alchemy</a><br> ML:APP 28.3, ESL 11.5, AI:AMA 21.2 and 21.4-5</td>
+<td><a href="https://www.dropbox.com/scl/fi/fu55wz1nyanqtbfn88otv/a6.pdf?rlkey=jqy70mzccthzbxjodj5hhiuld&amp;st=vjgoaaj9&amp;raw=1">Assignment 6</a> <a href="https://www.dropbox.com/scl/fi/e2gp93vykklkaf2ad9aqw/a6.zip?rlkey=fxzyf6eplbey2fw7frd0ncety&amp;st=c8k548qy&amp;raw=1">a6.zip</a> <br> <strong>Veterans Day - No Class Tuesday</strong></td>
+</tr>
+<tr class="even">
+<td>Nov 18, Nov 20</td>
+<td><a href="https://www.dropbox.com/scl/fi/s8vdcygb1l3ulncn6g9pw/L32.pdf?rlkey=n2g2ru1zctmzlxmovc2p3jvl4&amp;st=1jpz2kmg&amp;raw=1">Convolutions</a> <br> <a href="https://www.dropbox.com/scl/fi/3gsdsp9aflpypasprbdfk/L33.pdf?rlkey=vg3jdxwansfpqgg18g76t3ih3&amp;st=menov3ha&amp;raw=1">Convolutional Neural Networks</a> <br> <a href="https://www.dropbox.com/scl/fi/kpskt5k6j9oyjlzgud292/L34.pdf?rlkey=jpq5ujr16n8onu4y4usy4unwx&amp;st=1ovezsnt&amp;raw=1">Autoencoders</a> <br> <a href="https://www.dropbox.com/scl/fi/ghu2mo5o1fxr8rhdmk5zl/L35.pdf?rlkey=tcp2ssfgk8drij1z81vjhq8s8&amp;st=x9pmup66&amp;raw=1">Recurrent Neural Networks</a> <br> <a href="https://www.dropbox.com/scl/fi/qgx0cve08fk1rl7l7ed4j/L36.pdf?rlkey=slq7uq2vkpqmeylfs1f8sm6mg&amp;st=3kzvikf1&amp;raw=1">LSTMs and Transformers</a></td>
+<td><a href="https://youtu.be/KuXjwB4LzSA">But what is a convolution?</a> <br> <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">Convolutional Neural Networks</a><br> ML:APP 28.4, ESL 11.7, AI:AMA 21.3 <br> AI:AMA 21.6-8</td>
+<td><strong>Assignment 6 due: Nov 21</strong><br></td>
+</tr>
+<tr class="odd">
+<td>Nov 25, Nov 27</td>
+<td>What do we Learn?</td>
+<td></td>
+<td><strong>Thanksgiving - No Class Thursday</strong></td>
+</tr>
+<tr class="even">
+<td>Dec 2</td>
+<td>Final Exam</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="related-courses" class="level2">
+<h2 data-anchor-id="related-courses">Related Courses</h2>
+<ul>
+<li><a href="https://www.cs.ubc.ca/~schmidtm/Courses/340-F22/">Machine Learning and Data Mining</a> (UBC)</li>
+<li><a href="https://webdocs.cs.ualberta.ca/~dale/cmput466/w06/">Introduction to Machine Learning</a> (Alberta)</li>
+<li><a href="http://people.eecs.berkeley.edu/~jordan/courses/294-fall09/">Practical Machine Learning</a> (Berkeley)</li>
+<li><a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-867-machine-learning-fall-2006/lecture-notes/">Machine Learning</a> (MIT)</li>
+<li><a href="http://www.cs.cmu.edu/~epxing/Class/10701/lecture.html">Machine Learning</a> (CMU)</li>
+<li><a href="http://ciml.info">Course in Machine Learning</a> (Maryland)</li>
+<li><a href="http://www.stat.cmu.edu/~ryantibs/datamining/">Data Mining</a> (CMU)</li>
+</ul>
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="https://quarto.org">[Made with Quarto]</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://github.com/luqigroup/cap-4611">[Source]</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://raw.githubusercontent.com/luqigroup/cap-4611/refs/heads/main/LICENSE">[License]</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

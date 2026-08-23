@@ -22,25 +22,21 @@ about:
 
 **Instructor:** <span style="font-weight: normal;">[Ali Siahkoohi](https://alisiahkoohi.github.io/)</span>
 : - **Email:** [alisk@ucf.edu](mailto:alisk@ucf.edu)
-- **Office hours:** Wednesdays at 3--4pm, SPRK 207
+- **Office hours:** Wednesdays at 3--4pm
 
 **TAs:**
 : - Priyank Pathak
   - **Email:** [priyank@ucf.edu](mailto:priyank@ucf.edu)
+  - **Office hours:** Mondays, Wednesdays, and Fridays 10--11am
 - Anirudh Thatipelli
   - **Email:** [anirudh.thatipelli@ucf.edu](mailto:anirudh.thatipelli@ucf.edu)
-- Grader: Paul Hawkins
+  - **Office hours:** Tuesdays, Thursdays, and Fridays 2--3pm
+- Paul Hawkins (grader)
   - **Email:** [paul.hawkins@ucf.edu](mailto:paul.hawkins@ucf.edu)
 
-**TA office hours:** <span style="font-weight: normal;">held over Zoom</span>
-: - Mondays 10--11am
-- Tuesdays 2--3pm
-- Wednesdays 10--11am
-- Thursdays 2--3pm
-- Fridays 10--11am
-- Fridays 2--3pm
 
-*See webcourses for the Zoom links.*
+
+*See webcourses for the office hour location.*
 
 
 ## Description

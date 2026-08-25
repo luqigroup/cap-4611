@@ -32,6 +32,5 @@ format:
     toc: true
     toc-title: "<br><br><br>"
     link-external-newwindow: false
-    minimal: true
     grid:
       body-width: 1200px

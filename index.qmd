@@ -22,7 +22,7 @@ about:
 
 **Instructor:** <span style="font-weight: normal;">[Ali Siahkoohi](https://alisiahkoohi.github.io/)</span>
 : - **Email:** [alisk@ucf.edu](mailto:alisk@ucf.edu)
-- **Office hours:** Wednesdays at 3--4pm
+- **Office hours:** Mondays at 3--4pm
 
 **TAs:**
 : - Priyank Pathak

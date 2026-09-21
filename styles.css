@@ -13,3 +13,21 @@ a {
 a:hover, a:focus {
   text-decoration: underline; /* optional: keep underline on hover */
 }
+
+/* Re-centre the header logo on narrow screens (phones).
+   The fall-2025 build of Quarto emitted
+
+       div.quarto-about-solana .about-entity { align-items: start; ... }
+
+   BEFORE its own `@media (max-width: 991.98px) { ... align-items: center }`,
+   so the narrow-width centring won the cascade. Current Quarto emits that same
+   declaration AFTER the media query, and since both have equal specificity the
+   later `start` wins at every width -- which pushes the logo hard against the
+   left edge below 992px. Nothing in this repo changed; only Quarto did.
+   styles.css is the last stylesheet in <head>, so restating the rule here is
+   enough and needs no !important. */
+@media (max-width: 991.98px) {
+  div.quarto-about-solana .about-entity {
+    align-items: center;
+  }
+}

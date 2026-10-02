@@ -6,7 +6,7 @@ website:
   site-url: "https://luqigroup.github.io/cap-4611/"
   google-analytics: "G-VCVVD4KWRF"
   search: false
-  favicon: files/TheTab_KGrgb_square.png
+  favicon: files/UCF-LOGO-Stacked-BoldGold-square.png
   # Without this, the page footer will not display. It is removed in index.qmd
   navbar:
     background: dark
